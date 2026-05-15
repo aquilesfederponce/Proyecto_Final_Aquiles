@@ -1,3 +1,15 @@
+/*Paleta de Colores*/
+/*Lista de fuentes*/
+/*Mixin para fuentes y pesos*/
+h1 h2 h3 {
+  font-family: "Patua One", serif;
+  font-weight: 600px;
+}
 
+p {
+  font-family: "Lora", serif;
+  font-weight: 300px;
+  line-height: 10px;
+}
 
 /*# sourceMappingURL=main.css.map */

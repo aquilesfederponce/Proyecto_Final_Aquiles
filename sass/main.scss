@@ -1,0 +1,9 @@
+@use "./abstracts/variables" as *;
+
+h1 h2 h3{
+    @include H1(600px)  
+}
+
+p{
+    @include parrafos(300px, 10px)
+}
