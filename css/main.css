@@ -1,15 +1,50 @@
 /*Paleta de Colores*/
-/*Lista de fuentes*/
-/*Mixin para fuentes y pesos*/
-h1 h2 h3 {
-  font-family: "Patua One", serif;
-  font-weight: 600px;
+/*mixin flex*/
+header {
+  background-color: #262526;
+  padding: 1px;
+  color: #F2F2F2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+  margin-right: 75px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #F2F2F2;
 }
 
-p {
-  font-family: "Lora", serif;
-  font-weight: 300px;
-  line-height: 10px;
+header img {
+  width: 200px;
+  margin-left: 20px;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+.header__container h2 {
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

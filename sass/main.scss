@@ -1,9 +1,9 @@
 @use "./abstracts/variables" as *;
+@use "./layout/header" as*;
+@use "./abstracts/mixins.scss" as*;
 
-h1 h2 h3{
-    @include H1(600px)  
+*{
+    margin: 0;
+    padding: 0;
 }
 
-p{
-    @include parrafos(300px, 10px)
-}
