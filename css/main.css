@@ -1,9 +1,13 @@
 /*Paleta de Colores*/
 /*mixin flex*/
+/*Mixins fuentes*/
 header {
   background-color: #262526;
-  padding: 1px;
+  max-height: 95px;
   color: #F2F2F2;
+  font-family: "Oswald", sans-serif;
+  font-weight: 450;
+  font-size: 18px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -19,27 +23,39 @@ header nav ul {
   align-items: center;
   gap: 3rem;
   margin-right: 75px;
+  margin-top: 10px;
 }
 header nav ul li a {
   text-decoration: none;
   color: #F2F2F2;
+  transition: all 0.4s ease;
+}
+
+nav li .activo {
+  color: #D96E30;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #D96E30;
 }
 
 header img {
-  width: 200px;
+  width: 250px;
   margin-left: 20px;
+  margin-top: 22px;
 }
 
 .header__container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
 }
 .header__container h2 {
   font-size: 15px;
+  margin-top: 5px;
 }
 
 * {

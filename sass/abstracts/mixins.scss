@@ -8,3 +8,24 @@
     align-items: $align;
 }
 
+/*Mixins fuentes*/
+
+@mixin titulos($weight, $size, $spacing){
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+    letter-spacing: $spacing;
+}
+
+@mixin parrafos($weight, $size, $line){
+    font-family: "Lora", serif;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line;
+}
+
+@mixin subtitulos($weight, $size){
+    font-family: "Oswald", sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+}

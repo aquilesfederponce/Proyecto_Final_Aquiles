@@ -4,30 +4,43 @@
 
 header{
     background-color: map-get($colores, "negro");
-    padding: 1px;
+    max-height: 95px;
     color: map-get($colores, "blanco");
+    @include subtitulos(450, 18px,);
     @include flexible (row, nowrap, space-between, center);
     nav ul{
         list-style-type: none;
         @include flexible (row, nowrap, space-around, center);
         gap: 3rem;
         margin-right: 75px;
+        margin-top: 10px;
     }
     nav ul li a{
         text-decoration: none;
         color: map-get($colores, "blanco");
+        transition: all 0.4s ease;
     }
-}    
+}
+
+nav li .activo{
+    color: map-get($colores, "naranja_oscuro");
+    font-weight: bold;
+}
+
+header a:hover{
+    color: map-get($colores, "naranja_oscuro");
+}
 
 header img{
-    width: 200px;
+    width: 250px;
     margin-left: 20px;
+    margin-top: 22px;
 }
 
 .header__container{
-    @include flexible (row, nowrap, space-around, center);
-    gap: 10px;
+    @include flexible (row, nowrap, center, center);
     h2{
         font-size: 15px;
+        margin-top: 5px;
     }
 }
