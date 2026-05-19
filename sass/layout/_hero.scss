@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as*;
+@use "../abstracts/mixins.scss" as*;
+
+main .hero{
+    background-image: url(../assets/img/Bar-Maipu-Frente.webp);
+    background-size: cover;
+}
+
+.hero__box{
+    color: map-get($colores, "crema");
+    min-height: 120vh;
+    backdrop-filter: blur(4px);
+    @include flexible(column, nowrap, center, center);
+}
+
+
+.hero__box__text1{
+        @include titulos(600, 26px, 0.04em)
+}
+.hero__box__text2{
+    @include titulos(400, 145px, 0.04em)
+}
+.hero__box__text3{
+    @include titulos(600, 40px, 0.04em)
+}
