@@ -9,7 +9,7 @@ main .hero{
 .hero__box{
     color: map-get($colores, "crema");
     min-height: 120vh;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(4.4px);
     @include flexible(column, nowrap, center, center);
 }
 

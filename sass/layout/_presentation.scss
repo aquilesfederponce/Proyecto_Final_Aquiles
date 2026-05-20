@@ -1,39 +1,61 @@
 @use "../abstracts/variables" as*;
 @use "../abstracts/mixins.scss" as*;
 
-.presentation{
-    background-color: map-get($colores, "marron");
+.cartel_promos{
+    background-color: map-get($colores, "negro");
     min-height: 120vh;
-    .container{
-        @include flexible(row, nowrap, space-evenly, center);
-        gap:100px;
+    padding-top: 60px;
+    .contenedor_promos{
+        @include flexible(row, wrap, space-around, center);
+        gap: 20px;
+        margin-top: 60px;    
     }
-    .card1{
-        color: map-get($colores, "blanco");
-        margin-top: 5rem;
-        background-color: rgba(38, 37, 38, 0.6);
-        border: 3px solid transparent;
-        border-radius: 10px;
-        width: 500px;
-        height: 300px;
+}
+.promo_1{
+    width: 350px;
+    height: 500px;
+    border-radius: 15px;
+    background-image: url(../assets/img/Promo-HappyHour.jpg);
+    background-size: cover;
+    @include flexible(column, nowrap, center, center);
+    color: map-get($colores, "blanco");
+    text-align: center;
+    @include subtitulos(600, 22px);
+    transition: all 0.5s ease-in-out;
+}
+
+.promo_1:hover{
+    transform: scale(1.03, 1.03);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+.promo_2{
+    @extend .promo_1;
+    background-image: url(../assets/img/Promo-Pizza.jpg);
+}
+
+.promo_3{
+    @extend .promo_1;
+    background-image: url(../assets/img/Promo-Picada.jpg);
+}
+
+.texto_promo{
+    background-color: rgba(9, 10, 12, 0.7);
+    height: 400px;
+    padding: 20px;
+    @include flexible(column, nowrap, center, center);
+    h2{
+        @include titulos(300, 37px, 0.04em);
     }
-    .card2{
-        background-image: url(../assets/logos/Logo-Bar-Maipu-America.png);
-        background-size: cover;
-        margin-top: 5rem;
-        border: 3px solid transparent;
-        border-radius: 10px;
-        width: 500px;
-        height: 300px;
+    p{
+        @include parrafos(400, 20px, 1.7);
     }
 }
 
-.card1 h2{
-    @include subtitulos(600, 25px);
+.titulo_promo{
     text-align: center;
-}
-.card1 p{
-    @include parrafos(400, 18px, 1.7);
-    text-align: center;
+    color: map-get($colores, "crema");
+    @include titulos(600, 90px, 0.04em);
 }
 

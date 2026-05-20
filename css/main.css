@@ -33,7 +33,6 @@ header nav ul li a {
 
 nav li .activo {
   color: #D96E30;
-  font-weight: bold;
 }
 
 header a:hover {
@@ -66,7 +65,7 @@ main .hero {
 .hero__box {
   color: #F2E7C4;
   min-height: 120vh;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4.4px);
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -95,55 +94,92 @@ main .hero {
   letter-spacing: 0.04em;
 }
 
-.presentation {
-  background-color: #592202;
+.cartel_promos {
+  background-color: #262526;
   min-height: 120vh;
+  padding-top: 60px;
 }
-.presentation .container {
+.cartel_promos .contenedor_promos {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
-  gap: 100px;
-}
-.presentation .card1 {
-  color: #F2F2F2;
-  margin-top: 5rem;
-  background-color: rgba(38, 37, 38, 0.6);
-  border: 3px solid transparent;
-  border-radius: 10px;
-  width: 500px;
-  height: 300px;
-}
-.presentation .card2 {
-  background-image: url(../assets/logos/Logo-Bar-Maipu-America.png);
-  background-size: cover;
-  margin-top: 5rem;
-  border: 3px solid transparent;
-  border-radius: 10px;
-  width: 500px;
-  height: 300px;
+  gap: 20px;
+  margin-top: 60px;
 }
 
-.card1 h2 {
+.promo_1, .promo_3, .promo_2 {
+  width: 350px;
+  height: 500px;
+  border-radius: 15px;
+  background-image: url(../assets/img/Promo-HappyHour.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #F2F2F2;
+  text-align: center;
   font-family: "Oswald", sans-serif;
   font-weight: 600;
-  font-size: 25px;
-  text-align: center;
+  font-size: 22px;
+  transition: all 0.5s ease-in-out;
 }
 
-.card1 p {
+.promo_1:hover, .promo_3:hover, .promo_2:hover {
+  transform: scale(1.03, 1.03);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.promo_2 {
+  background-image: url(../assets/img/Promo-Pizza.jpg);
+}
+
+.promo_3 {
+  background-image: url(../assets/img/Promo-Picada.jpg);
+}
+
+.texto_promo {
+  background-color: rgba(9, 10, 12, 0.7);
+  height: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.texto_promo h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 300;
+  font-size: 37px;
+  letter-spacing: 0.04em;
+}
+.texto_promo p {
   font-family: "Lora", serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.7;
+}
+
+.titulo_promo {
   text-align: center;
+  color: #F2E7C4;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  font-size: 90px;
+  letter-spacing: 0.04em;
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */
