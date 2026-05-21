@@ -1,0 +1,138 @@
+@use "../abstracts/variables" as*;
+@use "../abstracts/mixins.scss" as*;
+
+.background{
+    background-color: map-get($colores, "negro");
+}
+
+.bento_welcome{
+    min-height: 100vh;
+    background-color: map-get($colores, "negro");
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+    padding-bottom: 100px;
+}
+
+.grid_container{
+    margin: 100px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.7fr;
+    grid-template-rows: 300px 260px;
+    gap: 24px;
+    grid-template-areas: 
+    "staff texto"
+    "logo texto";
+}
+
+.carta{
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+
+.staff-card{
+    grid-area: staff;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    };
+}
+.text-card{
+    grid-area: texto;
+    background-color: map-get($colores, "crema");
+    color: map-get($colores, "negro");
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(0,0,0,0.08);
+    text-align: center;
+    p{
+        @include parrafos(600, 20px, 1.7);
+    }
+    h2{
+        @include titulos(600, 36px, 0.1em);
+        color: map-get($colores, "naranja_oscuro")
+    }
+    h3{
+        @include titulos(600, 25px, 0.1em);
+        color: map-get($colores, "naranja_oscuro")
+    }
+}
+.logo-card{
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    };
+}
+
+.carta_sucursales{
+    min-height: 120vh;
+    background-image: url(../assets/img/Fondo_carta_sucursales.png);
+    background-size: cover;
+    position: relative;
+    .menu{
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        right: 50%;
+        height: fit-content;
+        width: fit-content;
+    }
+    .sucursales{
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        left: 50%;
+        height: fit-content;
+        width: fit-content;
+    }
+}
+
+.menu a{
+    width: 30px;
+    height: 15px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: map-get($colores, "negro");
+    padding: 15px;
+    color: map-get($colores, "blanco");
+    text-decoration: none;
+    @include titulos(600, 36px, 0em);
+    transition: all 0.4s ease-in-out;
+}
+
+.sucursales a{
+    width: 30px;
+    height: 15px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: map-get($colores, "blanco");
+    padding: 15px;
+    color: map-get($colores, "negro");
+    text-decoration: none;
+    @include titulos(600, 36px, 0em);
+    transition: all 0.4s ease-in-out;
+}
+
+.menu a:hover{
+    background-color: map-get($colores, "naranja_claro");
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    color: map-get($colores, "negro");
+}
+
+.sucursales a:hover{
+    background-color: map-get($colores, "naranja_claro");
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    color: map-get($colores, "blanco");
+}
+
+

@@ -2,7 +2,8 @@
 @use "./layout/header" as*;
 @use "./abstracts/mixins" as*;
 @use "./layout/hero" as*;
-@use "./layout/presentation" as*;
+@use "./layout/promos" as*;
+@use "./layout/welcome" as*;
 
 *{
     margin: 0;
@@ -12,5 +13,4 @@
 body{
     overflow-x: hidden;
 }
-
 
