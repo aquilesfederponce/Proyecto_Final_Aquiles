@@ -321,6 +321,129 @@ main .hero {
   color: #F2F2F2;
 }
 
+footer {
+  background-color: #010326;
+  min-height: 60vh;
+}
+
+.foot_container {
+  height: 75vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.foot_container .foot_list1, .foot_container .foot_list2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: space-evenly;
+  text-align: justify;
+}
+.foot_container .foot_list1 ul, .foot_container .foot_list2 ul {
+  list-style-type: none;
+  color: #F2F2F2;
+}
+.foot_container .foot_list1 a, .foot_container .foot_list2 a {
+  text-decoration: none;
+  color: #D97F30;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400px;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.foot_container .foot_list1 a:hover, .foot_container .foot_list2 a:hover {
+  color: #592202;
+  cursor: pointer;
+}
+.foot_list1 h3, .foot_container .foot_list2 h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 0.03em;
+}
+.foot_list1 h3 p, .foot_container .foot_list2 h3 p {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 0;
+}
+
+.foot_list2 h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 0.03em;
+}
+
+.list_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.foot {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.img1 {
+  background-image: url(../assets/img/Logo-Bar-Maipu-Azul-footer.png);
+  animation-name: fade1;
+}
+
+.img2 {
+  background-image: url(../assets/img/Logo-BarMaipu-naranja-footer.png);
+  animation-name: fade2;
+  opacity: 0;
+}
+
+.foot_img {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes fade1 {
+  0% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
