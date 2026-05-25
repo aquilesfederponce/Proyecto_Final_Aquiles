@@ -3,17 +3,17 @@
 
 .cartel_promos{
     background-color: map-get($colores, "negro");
-    min-height: 120vh;
-    padding-top: 60px;
+    min-height: 100vh;
+    padding-top: 100px;
     .contenedor_promos{
         @include flexible(row, wrap, space-around, center);
-        gap: 20px;
-        margin-top: 60px;    
+        gap: 30px;
+        margin-top: 65px;    
     }
 }
 .promo_1{
     width: 350px;
-    height: 500px;
+    height: 450px;
     border-radius: 15px;
     background-image: url(../assets/img/Promo-HappyHour.jpg);
     background-size: cover;
