@@ -29,3 +29,11 @@
     font-weight: $weight;
     font-size: $size;
 }
+
+/*Mixin Responsive Design*/
+
+@mixin media($medida : 480px){
+    @media screen and (max-width: $medida) {
+        @content;
+    }
+}

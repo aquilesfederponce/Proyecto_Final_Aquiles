@@ -28,15 +28,19 @@
     <header>
         <div class="header__container fade-in-fwd">
             <img src="./assets/logos/Logo-BarMaipu-naranja.png" alt="Logo tipográfico de Maipú en color naranja sobre fondo transparente.">
-            <h2>La tradición desde hace 60 años...</h2>
+            <h2 class="subtitulo">La tradición desde hace 60 años...</h2>
         </div>
-        <nav class="fade-in-fwd">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="mostrar-menu fade-in-fwd"><i class="fa-solid fa-bars"></i></label>
+        <nav class="nav-menu fade-in-fwd">
             <ul>
                 <li><a href="./index.html" class="activo">Inicio</a></li>
                 <li><a href="./pages/carta.html">Carta</a></li>
                 <li><a href="./pages/sucursales.html">Sucursales</a></li>
                 <li><a href="./pages/promociones.html">¡Promos!</a></li>
                 <li><a href="./pages/contacto.html">Contacto</a></li>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="cerrar-menu"><i class="fa-solid fa-x"></i></label>
             </ul>
         </nav>
     </header>

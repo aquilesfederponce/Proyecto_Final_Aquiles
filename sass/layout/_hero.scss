@@ -23,3 +23,28 @@ main .hero{
 .hero__box__text3{
     @include titulos(600, 40px, 0.04em)
 }
+
+@include media(){
+    main .hero{
+        background-image: url(../assets/img/Fondo-Hero-Mobile.jpg);
+        background-size: cover;
+    }
+    .hero__box{
+        backdrop-filter: blur(4.4px);
+        text-align: center;
+        min-height: 80vh;
+        img{
+            width: 100px;
+        }
+    }
+    .hero__box__text1{
+        @include titulos(600, 25px, 0.04em)
+    }
+    .hero__box__text2{
+        @include titulos(400, 74px, 0.04em)
+    }
+    .hero__box__text3{
+        @include titulos(600, 25px, 0.04em)
+    }
+
+}
