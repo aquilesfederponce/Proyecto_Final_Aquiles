@@ -1,8 +1,9 @@
 @use "../abstracts/variables" as*;
 @use "../abstracts/mixins.scss" as*;
+@use "sass:map";
 
 .cartel_promos{
-    background-color: map-get($colores, "negro");
+    background-color: map.get($colores, "negro");
     min-height: 100vh;
     padding-top: 100px;
     .contenedor_promos{
@@ -18,7 +19,7 @@
     background-image: url(../assets/img/Promo-HappyHour.jpg);
     background-size: cover;
     @include flexible(column, nowrap, center, center);
-    color: map-get($colores, "blanco");
+    color: map.get($colores, "blanco");
     text-align: center;
     @include subtitulos(600, 22px);
     transition: all 0.5s ease-in-out;
@@ -55,7 +56,47 @@
 
 .titulo_promo{
     text-align: center;
-    color: map-get($colores, "crema");
+    color: map.get($colores, "crema");
     @include titulos(600, 90px, 0.04em);
 }
 
+
+@include media(){
+    .cartel_promos{
+        width: 100%;
+        min-height: 100vh;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .contenedor_promos{
+            @include flexible(column, nowrap, center, space-around);
+            gap: 15px;
+            margin-top: 25px;    
+        }
+    }
+    .promo_1{
+        width: 250px;
+        height: 330px;
+        border-radius: 8px;
+        background-image: url(../assets/img/Promo-HappyHour-Mobile.jpg);
+        background-size: cover;
+        overflow: hidden;
+    }
+    .texto_promo{
+        background-color: rgba(9, 10, 12, 0.7);
+        height: 100%;
+        h2{
+            @include titulos(300, 20px, 0.04em);
+        }
+        p{
+            @include parrafos(400, 15px, 1.7);
+        }
+    }
+    .promo_2{
+        @extend .promo_1;
+        background-image: url(../assets/img/Promo-Pizza-Mobile.jpg);
+    }
+    .promo_3{
+        @extend .promo_1;
+        background-image: url(../assets/img/Promo-Picada-Mobile.jpg);
+    }
+}

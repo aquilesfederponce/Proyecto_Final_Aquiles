@@ -1,14 +1,15 @@
 @use "../abstracts/variables" as*;
 @use "../abstracts/mixins.scss" as*;
+@use "sass:map";
 
 
 header{
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: map-get($colores, "negro");
+    background-color: map.get($colores, "negro");
     max-height: 85px;
-    color: map-get($colores, "blanco");
+    color: map.get($colores, "blanco");
     @include subtitulos(450, 18px,);
     @include flexible (row, nowrap, space-between, center);
     nav ul{
@@ -20,7 +21,7 @@ header{
     }
     nav ul li a{
         text-decoration: none;
-        color: map-get($colores, "blanco");
+        color: map.get($colores, "blanco");
         transition: all 0.4s ease;
     }
 }
@@ -28,11 +29,11 @@ header{
 .fade-in-fwd{-webkit-animation:fade-in-fwd 1s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in-fwd 1s cubic-bezier(.39,.575,.565,1.000) both}
 
 nav li .activo{
-    color: map-get($colores, "naranja_oscuro");
+    color: map.get($colores, "naranja_oscuro");
 }
 
 header a:hover{
-    color: map-get($colores, "naranja_oscuro");
+    color: map.get($colores, "naranja_oscuro");
 }
 
 header img{
@@ -51,10 +52,10 @@ header img{
 
 .mostrar-menu,
 .cerrar-menu{
-    @include flexible (row, nowrap, center, center);
+    @include flexible (row, wrap, center, center);
     font-size: 30px;
     cursor: pointer;
-    /*display: none;*/
+    display: none;
     transition: all 0.4s ease;
 }
 .mostrar-menu{
@@ -73,14 +74,14 @@ header img{
         width: 100%;
         position: fixed;
         height: 100vh;
-        background: map-get($colores, "negro");
+        background: map.get($colores, "negro");
         right: -100%;
         top: 0;
         z-index: 100;
         padding: 100px 0px;
         transition: 0.3s ;
         ul{
-            @include flexible(column, nowrap, center, space-around);
+            @include flexible(column, wrap, center, space-around);
         }
     }
     .subtitulo{

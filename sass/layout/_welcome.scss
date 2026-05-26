@@ -1,13 +1,14 @@
 @use "../abstracts/variables" as*;
 @use "../abstracts/mixins.scss" as*;
+@use "sass:map";
 
 .background{
-    background-color: map-get($colores, "negro");
+    background-color: map.get($colores, "negro");
 }
 
 .bento_welcome{
     min-height: 100vh;
-    background-color: map-get($colores, "negro");
+    background-color: map.get($colores, "negro");
     display: flex;
     justify-content: center;
     padding: 80px 20px;
@@ -41,8 +42,8 @@
 }
 .text-card{
     grid-area: texto;
-    background-color: map-get($colores, "crema");
-    color: map-get($colores, "negro");
+    background-color: map.get($colores, "crema");
+    color: map.get($colores, "negro");
     padding: 60px;
     display: flex;
     flex-direction: column;
@@ -54,11 +55,11 @@
     }
     h2{
         @include titulos(600, 36px, 0.1em);
-        color: map-get($colores, "naranja_oscuro")
+        color: map.get($colores, "naranja_oscuro")
     }
     h3{
         @include titulos(600, 25px, 0.1em);
-        color: map-get($colores, "naranja_oscuro")
+        color: map.get($colores, "naranja_oscuro")
     }
 }
 .logo-card{
@@ -102,9 +103,9 @@
     height: 15px;
     border-radius: 15px;
     text-align: center;
-    background-color: map-get($colores, "negro");
+    background-color: map.get($colores, "negro");
     padding: 15px;
-    color: map-get($colores, "blanco");
+    color: map.get($colores, "blanco");
     text-decoration: none;
     @include titulos(600, 36px, 0em);
     transition: all 0.4s ease-in-out;
@@ -115,24 +116,82 @@
     height: 15px;
     border-radius: 15px;
     text-align: center;
-    background-color: map-get($colores, "blanco");
+    background-color: map.get($colores, "blanco");
     padding: 15px;
-    color: map-get($colores, "negro");
+    color: map.get($colores, "negro");
     text-decoration: none;
     @include titulos(600, 36px, 0em);
     transition: all 0.4s ease-in-out;
 }
 
 .menu a:hover{
-    background-color: map-get($colores, "naranja_claro");
+    background-color: map.get($colores, "naranja_claro");
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    color: map-get($colores, "negro");
+    color: map.get($colores, "negro");
 }
 
 .sucursales a:hover{
-    background-color: map-get($colores, "naranja_claro");
+    background-color: map.get($colores, "naranja_claro");
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    color: map-get($colores, "blanco");
+    color: map.get($colores, "blanco");
 }
 
+@include media(){
+    .staff-card{
+        display: none;
+    }
+    .logo-card{
+        display: none;
+    }
+    .grid_container{
+        @include flexible(column, nowrap, center, space-around);
+        margin: 30px;
+    }
+    .text-card{
+        width: 340px;
+        height: 700px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        p{
+            @include parrafos(600, 20px, 1.7);
+        }
+        h2{
+            @include titulos(600, 25px, 0.1em);
+            color: map.get($colores, "naranja_oscuro")
+        }
+        h3{
+            @include titulos(600, 16px, 0.1em);
+            color: map.get($colores, "naranja_oscuro")
+        }
+    }
+    .carta_sucursales{
+        background-image: url(../assets/img/Fondo_sucursalescarta_mobile.webp);
+        background-size: cover;
+        min-height: 120vh;
+        .menu{
+            right: 0;
+            bottom: 50%;
+        }
+        .sucursales{
+            left: 0;
+            top: 50%;
+        }
+    }
+    .menu a{
+        width: 20px;
+        height: 10px;
+        padding: 15px;
+        @include titulos(600, 25px, 0em);
+    }
+    .sucursales a{
+        width: 20px;
+        height: 10px;
+        padding: 15px;
+        @include titulos(600, 25px, 0em);
+    }
+
+}
 

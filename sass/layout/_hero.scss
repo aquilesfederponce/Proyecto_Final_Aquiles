@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as*;
 @use "../abstracts/mixins.scss" as*;
+@use "sass:map";
 
 main .hero{
     background-image: url(../assets/img/Bar-Maipu-Frente.webp);
@@ -7,7 +8,7 @@ main .hero{
 }
 
 .hero__box{
-    color: map-get($colores, "crema");
+    color: map.get($colores, "crema");
     min-height: 120vh;
     backdrop-filter: blur(4.4px);
     @include flexible(column, nowrap, center, center);
@@ -28,13 +29,16 @@ main .hero{
     main .hero{
         background-image: url(../assets/img/Fondo-Hero-Mobile.jpg);
         background-size: cover;
+        width: 100%;
     }
     .hero__box{
         backdrop-filter: blur(4.4px);
         text-align: center;
         min-height: 80vh;
+        overflow: hidden;
         img{
             width: 100px;
+            display: block;
         }
     }
     .hero__box__text1{

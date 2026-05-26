@@ -70,12 +70,12 @@ header img {
 .cerrar-menu {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   font-size: 30px;
   cursor: pointer;
-  /*display: none;*/
+  display: none;
   transition: all 0.4s ease;
 }
 
@@ -106,7 +106,7 @@ header img {
   .nav-menu ul {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: space-around;
   }
@@ -182,14 +182,17 @@ main .hero {
   main .hero {
     background-image: url(../assets/img/Fondo-Hero-Mobile.jpg);
     background-size: cover;
+    width: 100%;
   }
   .hero__box {
     backdrop-filter: blur(4.4px);
     text-align: center;
     min-height: 80vh;
+    overflow: hidden;
   }
   .hero__box img {
     width: 100px;
+    display: block;
   }
   .hero__box__text1 {
     font-family: "Bebas Neue", sans-serif;
@@ -289,6 +292,53 @@ main .hero {
   letter-spacing: 0.04em;
 }
 
+@media screen and (max-width: 480px) {
+  .cartel_promos {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .cartel_promos .contenedor_promos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: space-around;
+    gap: 15px;
+    margin-top: 25px;
+  }
+  .promo_1, .promo_2, .promo_3 {
+    width: 250px;
+    height: 330px;
+    border-radius: 8px;
+    background-image: url(../assets/img/Promo-HappyHour-Mobile.jpg);
+    background-size: cover;
+    overflow: hidden;
+  }
+  .texto_promo {
+    background-color: rgba(9, 10, 12, 0.7);
+    height: 100%;
+  }
+  .texto_promo h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+  }
+  .texto_promo p {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .promo_2 {
+    background-image: url(../assets/img/Promo-Pizza-Mobile.jpg);
+  }
+  .promo_3 {
+    background-image: url(../assets/img/Promo-Picada-Mobile.jpg);
+  }
+}
 .background {
   background-color: #262526;
 }
@@ -437,13 +487,90 @@ main .hero {
   color: #F2F2F2;
 }
 
+@media screen and (max-width: 480px) {
+  .staff-card {
+    display: none;
+  }
+  .logo-card {
+    display: none;
+  }
+  .grid_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: space-around;
+    margin: 30px;
+  }
+  .text-card {
+    width: 340px;
+    height: 700px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .text-card p {
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .text-card h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 0.1em;
+    color: #D96E30;
+  }
+  .text-card h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: #D96E30;
+  }
+  .carta_sucursales {
+    background-image: url(../assets/img/Fondo_sucursalescarta_mobile.webp);
+    background-size: cover;
+    min-height: 120vh;
+  }
+  .carta_sucursales .menu {
+    right: 0;
+    bottom: 50%;
+  }
+  .carta_sucursales .sucursales {
+    left: 0;
+    top: 50%;
+  }
+  .menu a {
+    width: 20px;
+    height: 10px;
+    padding: 15px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 0em;
+  }
+  .sucursales a {
+    width: 20px;
+    height: 10px;
+    padding: 15px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 0em;
+  }
+}
 footer {
   background-color: #010326;
   min-height: 60vh;
+  margin-bottom: 0;
 }
 
 .foot_container {
-  height: 75vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -560,9 +687,48 @@ footer {
     opacity: 1;
   }
 }
+@media screen and (max-width: 480px) {
+  .foot_container {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: space-evenly;
+    padding: 30px;
+    min-height: 75vh;
+  }
+  .list_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .foot_list1, .foot_container .foot_list2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+  }
+  .foot_list1 p, .foot_container .foot_list2 p {
+    text-align: justify;
+    margin-right: 30px;
+  }
+  .foot_img {
+    display: none;
+  }
+  footer {
+    margin-bottom: 0;
+  }
+}
 * {
   margin: 0;
   padding: 0;
+}
+
+*::before, *::after, * {
+  box-sizing: border-box;
 }
 
 body {
