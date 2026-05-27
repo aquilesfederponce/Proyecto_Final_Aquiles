@@ -722,6 +722,148 @@ footer {
     margin-bottom: 0;
   }
 }
+.menu_carta {
+  background-color: #262526;
+  min-height: 120vh;
+  padding: 60px;
+}
+
+.menu_title h1 {
+  color: #F2E7C4;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  letter-spacing: 0.07em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.menu_article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu_article .item {
+  width: 350px;
+  height: 450px;
+  background-color: #F2E7C4;
+  border-radius: 12px;
+}
+.menu_article .item_name {
+  background-image: url(../assets/img_carta/Fondo_Pizzas.jpg);
+  background-size: cover;
+}
+.menu_article .item_name .item_name_text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(3, 3, 19, 0.6);
+  background-size: contain;
+  backdrop-filter: blur(1.5px);
+  border-radius: 12px;
+}
+.menu_article .item_name .item_name_text h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  letter-spacing: 0.03em;
+  color: #F2F2F2;
+}
+.menu_article .item_description {
+  border: 2px solid #D97F30;
+  border-radius: 12px;
+}
+
+table {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+table tr {
+  border: 1px solid transparent;
+}
+table tr:not(:last-child) {
+  border-bottom: 0.5px solid #D97F30;
+}
+table td {
+  padding-inline: 36px;
+  padding-block: 1.5px;
+}
+table .value {
+  color: #010326;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+table .type {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+table .titulo_table {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  letter-spacing: 0.03em;
+  color: #D96E30;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 70px;
+  opacity: 1;
+  display: flex;
+  align-items: center; /* centra vertical */
+}
+
+.carousel-control-prev {
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+
+/* derecha */
+.carousel-control-next {
+  justify-content: flex-end;
+  padding-right: 15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(145, 99, 0, 0.6);
+  background-size: 45%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(0);
+}
+
+.carousel-indicators .active {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(76%) saturate(812%) hue-rotate(344deg) brightness(93%) contrast(92%) !important;
+}
+
+.carousel-indicators {
+  background: rgba(236, 236, 236, 0.4);
+}
+
+.carousel-indicators [data-bs-target] {
+  filter: brightness(0) saturate(100%) invert(4%) sepia(79%) saturate(2183%) hue-rotate(232deg) brightness(92%) contrast(117%);
+}
+
 * {
   margin: 0;
   padding: 0;

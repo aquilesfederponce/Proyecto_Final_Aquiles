@@ -1,0 +1,120 @@
+@use "../abstracts/variables" as*;
+@use "../abstracts/mixins.scss" as*;
+@use "sass:map";
+
+.menu_carta{
+    background-color: map.get($colores, "negro");
+    min-height: 120vh;
+    padding: 60px;
+}
+.menu_title{
+    h1{
+        color: map.get($colores, "crema");
+        @include titulos(600, 60px, 0.07em);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+.menu_article{
+    @include flexible(row, wrap, space-around, center);
+    .item{
+        width: 350px;
+        height: 450px;
+        background-color: map.get($colores, "crema");
+        border-radius: 12px;
+    }
+    .item_name{
+        background-image: url(../assets/img_carta/Fondo_Pizzas.jpg);
+        background-size: cover;
+        .item_name_text{
+            width: 100%;
+            height: 100%;
+            @include flexible(row, nowrap, center, center);
+            background-color: rgba(3, 3, 19, 0.6);
+            background-size:contain;
+            backdrop-filter: blur(1.5px);
+            border-radius: 12px;
+            h2{
+                @include titulos(600, 60px, 0.03em);
+                color: map.get($colores, "blanco");
+            }
+        }
+    }
+    .item_description{
+        border: 2px solid map.get($colores, naranja_claro);
+        border-radius: 12px;
+    }
+}
+
+table{
+    @include flexible(column, nowrap, center, center);
+    text-align: center;
+    tr{
+        border: 1px solid transparent;
+    }
+    tr:not(:last-child){
+        border-bottom: 0.5px solid map.get($colores, "naranja_claro");
+    }
+    td{
+        padding-inline: 36px;
+        padding-block: 1.5px;
+    }
+    .value{
+        color: map.get($colores, "azul_oscuro");
+        font-weight: bold;
+        @include subtitulos(400, 20px);
+    }
+    .type{
+        @include subtitulos(400, 20px);
+    }
+    .titulo_table{
+        @include titulos(400, 23px, 0.03em);
+        color: map.get($colores, "naranja_oscuro");
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 70px;
+    opacity: 1;
+    display: flex;
+    align-items: center; /* centra vertical */
+}
+.carousel-control-prev {
+    justify-content: flex-start;
+    padding-left: 15px;
+}
+
+/* derecha */
+.carousel-control-next {
+    justify-content: flex-end;
+    padding-right: 15px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(145, 99, 0, 0.6);
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0);
+}
+.carousel-indicators .active {
+    filter: brightness(0) saturate(100%) invert(56%) sepia(76%)
+    saturate(812%) hue-rotate(344deg) brightness(93%) contrast(92%) !important;
+}
+
+.carousel-indicators{
+    background: rgba(236, 236, 236, 0.4);
+}
+
+.carousel-indicators [data-bs-target] {
+    filter: brightness(0) saturate(100%) invert(4%) sepia(79%)
+    saturate(2183%) hue-rotate(232deg) brightness(92%) contrast(117%);
+}
