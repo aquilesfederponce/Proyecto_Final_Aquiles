@@ -5,7 +5,7 @@
 .menu_carta{
     background-color: map.get($colores, "negro");
     min-height: 120vh;
-    padding: 60px;
+    padding: 40px;
 }
 .menu_title{
     h1{
@@ -16,8 +16,21 @@
     }
 }
 
+.item_name::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+.menu_container{
+    @include flexible (column, nowrap, center, space-around);
+    gap: 120px
+}
 .menu_article{
-    @include flexible(row, wrap, space-around, center);
+    @include flexible(row, wrap, center, center);
+    gap: 15px;
+    margin-bottom: 70px;
     .item{
         width: 350px;
         height: 450px;
@@ -25,18 +38,25 @@
         border-radius: 12px;
     }
     .item_name{
-        background-image: url(../assets/img_carta/Fondo_Pizzas.jpg);
-        background-size: cover;
+        position: relative;
+        overflow: hidden;
+        .item_name_img{
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
         .item_name_text{
+            position: relative;
+            z-index: 2;
             width: 100%;
             height: 100%;
             @include flexible(row, nowrap, center, center);
-            background-color: rgba(3, 3, 19, 0.6);
-            background-size:contain;
-            backdrop-filter: blur(1.5px);
             border-radius: 12px;
             h2{
-                @include titulos(600, 60px, 0.03em);
+                @include titulos(600, 55px, 0.03em);
                 color: map.get($colores, "blanco");
             }
         }
@@ -63,10 +83,10 @@ table{
     .value{
         color: map.get($colores, "azul_oscuro");
         font-weight: bold;
-        @include subtitulos(400, 20px);
+        @include subtitulos(400, 1rem);
     }
     .type{
-        @include subtitulos(400, 20px);
+        @include subtitulos(400, 1rem);
     }
     .titulo_table{
         @include titulos(400, 23px, 0.03em);
@@ -74,6 +94,173 @@ table{
     }
 }
 
+.hamb table{
+    .value{
+        color: map.get($colores, "azul_oscuro");
+        font-weight: bold;
+        @include subtitulos(400, 1rem);
+    }
+    .type{
+        @include subtitulos(400, 1rem);
+    }
+    .desc{
+        @include subtitulos(400, 10px);
+        text-align: justify;
+    }
+    td{
+        padding-inline: 5px;
+        padding-block: 0.3px;
+    }
+    .titulo_table{
+        @include titulos(400, 23px, 0.03em);
+    }
+}
+
+.empa table{
+    .type{
+        @include subtitulos(400, 1rem);
+    }
+    .value{
+        @include subtitulos(400, 1rem);
+    }
+    td{
+        padding-inline: 36px;
+        padding-block: 0.7px;
+    }
+}
+.pasta table{
+    .type{
+        @include subtitulos(400, 1rem);
+    }
+    .value{
+        @include subtitulos(400, 1rem);
+    }
+    td{
+        padding-inline: 36px;
+        padding-block: 0.3px;
+    }
+}
+
+.plato table{
+    .type{
+        @include subtitulos(400, 1rem);
+    }
+    .value{
+        @include subtitulos(400, 1rem);
+    }
+    td{
+        padding-inline: 36px;
+        padding-block: 1px;
+    }
+}
+
+.postre table{
+    .type{
+        @include subtitulos(400, 1rem);
+    }
+    .value{
+        @include subtitulos(400, 1rem);
+    }
+    td{
+        padding-inline: 36px;
+        padding-block: 3px;
+    }
+}
+
+@include media(){
+    .menu_container{
+        @include flexible(column, nowrap, center, space-around);
+        gap: 80px;
+    }
+    .menu_article{
+        gap: 20px;
+        .item{
+            width: 100%;
+            height: 450px;
+            background-color: map.get($colores, "crema");
+            border-radius: 12px;
+        }
+    }
+    table{
+        .value{
+            @include subtitulos(400, 1rem);
+        }
+        .type{
+            @include subtitulos(400, 1rem);
+        }
+    }
+    .carousel{
+        display: none;
+    }
+    .empa table{
+        .value{
+            @include subtitulos(400, 1rem);
+        }
+        .type{
+            @include subtitulos(400, 1rem);
+        }
+    }
+    .hamb table{
+        .desc{
+            display: none;
+        }
+        .description{
+            display: none;
+        }
+        td{
+            padding-inline:40px;
+            padding-block: 1px;
+        }
+        .value{
+            @include subtitulos(400, 1rem);
+        }
+        .type{
+            @include subtitulos(400, 1rem);
+        }
+        .titulo_table{
+            @include titulos(400, 23px, 0.03em);
+        }
+    }
+    .pasta table{
+        .type{
+            @include subtitulos(400, 1rem);
+        }
+        .value{
+            @include subtitulos(400, 1rem);
+        }
+        td{
+            padding-inline: 36px;
+            padding-block: 0.1px;
+        }
+    }
+    .plato table{
+        .type{
+            @include subtitulos(400, 1rem);
+        }
+        .value{
+            @include subtitulos(400, 1rem);
+        }
+        td{
+            padding-inline: 36px;
+            padding-block: 0.7px;
+        }
+    }
+    .postre table{
+        .type{
+            @include subtitulos(400, 1rem)
+        }
+        .value{
+            @include subtitulos(400, 1rem);
+        }
+        td{
+            padding-inline: 36px;
+            padding-block: 2px;
+        }
+    }
+}
+
+
+/*Bootsrap*/
 .carousel-control-prev,
 .carousel-control-next {
     width: 70px;
@@ -103,7 +290,7 @@ table{
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: brightness(0);
+    filter: brightness(0) invert(1);
 }
 .carousel-indicators .active {
     filter: brightness(0) saturate(100%) invert(56%) sepia(76%)
