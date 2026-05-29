@@ -1228,6 +1228,72 @@ table .titulo_table {
   transition: 0.4s ease;
 }
 
+@media screen and (max-width: 480px) {
+  .sucursales {
+    min-height: 100vh;
+  }
+  .sucursales h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: 0.07em;
+  }
+  .sucursal_card h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    letter-spacing: 0.07em;
+  }
+  .sucursal_card .verso {
+    display: none;
+  }
+  iframe {
+    width: 300px;
+    height: 300px;
+  }
+  .sucursal_card_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: space-around;
+  }
+  .sucursal_card_img {
+    width: 300px;
+    height: 300px;
+  }
+  .sucursal_card_desc {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .sucursal_card_desc h3 {
+    color: #D96E30;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .sucursal_card_desc p {
+    color: #010326;
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 2;
+  }
+  .sucursal_card_desc a {
+    text-decoration: none;
+    color: #010326;
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 2;
+  }
+}
 * {
   margin: 0;
   padding: 0;

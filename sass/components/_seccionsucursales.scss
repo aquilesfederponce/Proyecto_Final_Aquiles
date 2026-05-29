@@ -91,3 +91,49 @@
         transition: 0.4s ease;
     }
 }
+
+@include media(){
+    .sucursales{
+        min-height: 100vh;
+        h1{
+            @include titulos(600, 50px, 0.07em);
+        }
+    }
+    .sucursal_card{
+        h2{
+            @include titulos(600, 35px, 0.07em);
+        }
+        .verso{
+            display: none;
+        }
+    }
+    iframe{
+        width: 300px;
+        height: 300px;
+    }
+    .sucursal_card_container{
+        @include flexible(column, nowrap, center, space-around);
+    }
+    .sucursal_card_img{
+        width: 300px;
+        height: 300px;
+    }
+    .sucursal_card_desc{
+        width: 300px;
+        height: 300px;
+        @include flexible(column, nowrap, center, center);
+        h3{
+            color: map.get($colores, "naranja_oscuro");
+            @include titulos(400, 16px, 0.02em);
+        }
+        p{
+            color: map.get($colores, "azul_oscuro");
+            @include parrafos(600, 11px, 2);
+        }
+        a{
+            text-decoration: none;
+            color: map.get($colores, "azul_oscuro");
+            @include parrafos(600, 12px, 2);
+        }
+    }
+}
