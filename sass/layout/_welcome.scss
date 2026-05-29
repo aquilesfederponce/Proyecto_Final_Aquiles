@@ -88,7 +88,7 @@
         height: fit-content;
         width: fit-content;
     }
-    .sucursales{
+    .sucursales_boton{
         position: absolute;
         inset: 0;
         margin: auto;
@@ -111,7 +111,7 @@
     transition: all 0.4s ease-in-out;
 }
 
-.sucursales a{
+.sucursales_boton a{
     width: 30px;
     height: 15px;
     border-radius: 15px;
@@ -130,7 +130,7 @@
     color: map.get($colores, "negro");
 }
 
-.sucursales a:hover{
+.sucursales_boton a:hover{
     background-color: map.get($colores, "naranja_claro");
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     color: map.get($colores, "blanco");
@@ -175,7 +175,7 @@
             right: 0;
             bottom: 50%;
         }
-        .sucursales{
+        .sucursales_boton{
             left: 0;
             top: 50%;
         }
@@ -186,7 +186,7 @@
         padding: 15px;
         @include titulos(600, 25px, 0em);
     }
-    .sucursales a{
+    .sucursales_boton a{
         width: 20px;
         height: 10px;
         padding: 15px;
