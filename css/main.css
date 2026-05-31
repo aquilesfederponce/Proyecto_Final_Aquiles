@@ -1132,15 +1132,19 @@ table .titulo_table {
   align-items: center;
   gap: 20px;
 }
-.sucursal_card iframe {
+.sucursal_card .mapa {
   width: 920px;
-  height: 400px;
-  border-radius: 15px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+.sucursal_card .mapa iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
 }
 .sucursal_card h2 {
   font-family: "Bebas Neue", sans-serif;
@@ -1247,8 +1251,14 @@ table .titulo_table {
   .sucursal_card .verso {
     display: none;
   }
-  iframe {
+  .mapa {
     width: 300px;
+    max-width: 300px;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .mapa iframe {
+    width: 100%;
     height: 300px;
   }
   .sucursal_card_container {
