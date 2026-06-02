@@ -270,7 +270,7 @@ main .hero {
   justify-content: center;
   align-items: center;
 }
-.texto_promo h2 {
+.texto_promo h3 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 300;
   font-size: 37px;
@@ -316,7 +316,7 @@ main .hero {
     background-color: rgba(9, 10, 12, 0.7);
     height: 100%;
   }
-  .texto_promo h2 {
+  .texto_promo h3 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 300;
     font-size: 20px;
