@@ -1,0 +1,114 @@
+@use "../abstracts/variables" as*;
+@use "../abstracts/mixins.scss" as*;
+@use "sass:map";
+
+.contacto{
+    background-color: map.get($colores, "negro");
+    min-height: 120vh;
+    padding: 40px;
+    padding-bottom: 80px;
+}
+
+.contacto_title{
+    h1{
+        color: map.get($colores, "crema");
+        @include titulos(600, 60px, 0.07em);
+        text-align: center;
+        margin-bottom: 80px;
+    }
+    h2{
+        @include subtitulos(600, 25px);
+        color: map.get($colores, "naranja_oscuro");
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+.contacto_container{
+    @include flexible(column, nowrap, space-around, center);
+    gap: 80px;
+}
+.contacto_card_1{
+    width: 550px;
+    height: 400px;
+    background-color: map.get($colores, "crema");
+    border: solid 3px map.get($colores, "naranja_oscuro");
+    border-radius: 15px;
+    @include flexible(row, nowrap, flex-start, center);
+    text-align: justify;
+    ul{
+        list-style-type: none;
+        margin-top: 8px;
+    }
+    li{
+        @include flexible(column, nowrap, center, flex-start);
+        margin-top: 8px;
+    }
+    h4{
+        @include titulos(600, 22px, 0.07em);
+        color: map.get($colores, "naranja_oscuro");
+    }
+    p, a{
+        @include subtitulos(400, 20px);
+        color: map.get($colores, "azul_oscuro");
+        text-decoration: none;
+    }
+    a:hover{
+        color: map.get($colores, "naranja_claro");
+        transition: 0.3s ease-in-out;
+    }
+    img{
+        overflow: hidden;
+        margin: 0px;
+    }
+}
+
+.contacto_card_wrap{
+    @include flexible(column, nowrap, center, space-evenly);
+    gap: 40px;
+    h3{
+        @include titulos(600, 40px, 0.07em);
+        color: map.get($colores, "crema");
+        text-align: center;
+    }
+}
+
+.contacto_card_2{
+    @extend .contacto_card_1;
+    background-color: map.get($colores, "azul_oscuro");
+    p, a{
+        color: map.get($colores, "crema");
+    }
+}
+.contacto_card_3{
+    @extend .contacto_card_1;
+    background-color: map.get($colores, "naranja_oscuro");
+    h4{
+        color: map.get($colores, "azul_oscuro");
+    }
+    p, a{
+        color: map.get($colores, "crema");
+    }
+    border: solid 3px map.get($colores, "azul_oscuro");
+    a:hover{
+        color: map.get($colores, "azul_oscuro");
+    }
+}
+
+@include media(){
+    .contacto_card_1{
+        width: 350px;
+        max-width: 100%;
+        @include flexible(column, nowrap, center, space-around);
+        height: 650px;
+    }
+    .contacto_img{
+        width: 250px;
+        height: 250px;
+    }
+    .contacto_title{
+        h1{
+            @include titulos(600, 50px, 0.07em);
+        }
+    }
+}
