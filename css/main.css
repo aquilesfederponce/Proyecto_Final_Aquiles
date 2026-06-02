@@ -61,9 +61,9 @@ header img {
   justify-content: center;
   align-items: center;
 }
-.header__container h2 {
+.header__container p {
   font-size: 15px;
-  margin-top: 5px;
+  margin-top: 13px;
 }
 
 .mostrar-menu,
@@ -292,6 +292,10 @@ main .hero {
   letter-spacing: 0.04em;
 }
 
+.promo_1, .promo_2, .promo_3 {
+  border-radius: 0px;
+}
+
 @media screen and (max-width: 480px) {
   .cartel_promos {
     width: 100%;
@@ -308,14 +312,6 @@ main .hero {
     gap: 15px;
     margin-top: 25px;
   }
-  .promo_1, .promo_2, .promo_3 {
-    width: 250px;
-    height: 330px;
-    border-radius: 8px;
-    background-image: url(../assets/img/Promo-HappyHour-Mobile.jpg);
-    background-size: cover;
-    overflow: hidden;
-  }
   .texto_promo {
     background-color: rgba(9, 10, 12, 0.7);
     height: 100%;
@@ -331,12 +327,6 @@ main .hero {
     font-weight: 400;
     font-size: 15px;
     line-height: 1.7;
-  }
-  .promo_2 {
-    background-image: url(../assets/img/Promo-Pizza-Mobile.jpg);
-  }
-  .promo_3 {
-    background-image: url(../assets/img/Promo-Picada-Mobile.jpg);
   }
 }
 .background {
@@ -934,6 +924,12 @@ table .titulo_table {
 }
 
 @media screen and (max-width: 480px) {
+  .menu_title h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: 0.07em;
+  }
   .menu_container {
     display: flex;
     flex-direction: column;
@@ -1302,6 +1298,106 @@ table .titulo_table {
     font-weight: 600;
     font-size: 12px;
     line-height: 2;
+  }
+}
+.seccion_promos {
+  background-color: #262526;
+  min-height: 120vh;
+  padding: 40px;
+}
+.seccion_promos .contenedor_promos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  margin-top: 45px;
+  margin-bottom: 150px;
+}
+
+.promos_container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.promos_title h1 {
+  color: #F2E7C4;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  letter-spacing: 0.07em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.promos_title h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: #D96E30;
+  text-align: center;
+}
+
+.promo_1, .promo_5, .promo_4, .promo_3, .promo_2 {
+  width: 350px;
+  height: 450px;
+  border-radius: 15px;
+  background-image: url(../assets/img/Promo-HappyHour.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #F2F2F2;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  transition: all 0.5s ease-in-out;
+}
+
+.promo_1:hover, .promo_5:hover, .promo_4:hover, .promo_3:hover, .promo_2:hover {
+  transform: scale(1.03, 1.03);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.promo_2 {
+  background-image: url(../assets/img/Promo-Pizza.jpg);
+}
+
+.promo_3 {
+  background-image: url(../assets/img/Promo-Picada.jpg);
+}
+
+.promos2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.promo_4 {
+  background-image: url(../assets/img/Burger-del-mes.jpg);
+}
+
+.promo_5 {
+  background-image: url(../assets/img_carta/Napo-alplato.jpg);
+}
+
+@media screen and (max-width: 480px) {
+  .promo_1, .promo_2, .promo_3, .promo_4, .promo_5 {
+    border-radius: 0px;
+  }
+  .promos_title h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: 0.07em;
   }
 }
 * {

@@ -168,6 +168,11 @@ table{
 }
 
 @include media(){
+    .menu_title{
+        h1{
+            @include titulos(600, 50px, 0.07em);
+        }
+    }
     .menu_container{
         @include flexible(column, nowrap, center, space-around);
         gap: 80px;

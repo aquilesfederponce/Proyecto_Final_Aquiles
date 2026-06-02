@@ -44,9 +44,9 @@ header img{
 
 .header__container{
     @include flexible (row, nowrap, center, center);
-    h2{
+    p{
         font-size: 15px;
-        margin-top: 5px;
+        margin-top: 13px;
     }
 }
 

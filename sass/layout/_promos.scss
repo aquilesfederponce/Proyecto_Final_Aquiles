@@ -59,7 +59,9 @@
     color: map.get($colores, "crema");
     @include titulos(600, 90px, 0.04em);
 }
-
+.promo_1{
+    border-radius: 0px;
+}
 
 @include media(){
     .cartel_promos{
@@ -73,14 +75,6 @@
             margin-top: 25px;    
         }
     }
-    .promo_1{
-        width: 250px;
-        height: 330px;
-        border-radius: 8px;
-        background-image: url(../assets/img/Promo-HappyHour-Mobile.jpg);
-        background-size: cover;
-        overflow: hidden;
-    }
     .texto_promo{
         background-color: rgba(9, 10, 12, 0.7);
         height: 100%;
@@ -93,10 +87,8 @@
     }
     .promo_2{
         @extend .promo_1;
-        background-image: url(../assets/img/Promo-Pizza-Mobile.jpg);
     }
     .promo_3{
         @extend .promo_1;
-        background-image: url(../assets/img/Promo-Picada-Mobile.jpg);
     }
 }

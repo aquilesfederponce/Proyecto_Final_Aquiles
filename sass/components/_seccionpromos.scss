@@ -1,0 +1,84 @@
+@use "../abstracts/variables" as*;
+@use "../abstracts/mixins.scss" as*;
+@use "sass:map";
+
+.seccion_promos{
+    background-color: map.get($colores, "negro");
+    min-height: 120vh;
+    padding: 40px;
+    .contenedor_promos{
+        @include flexible(row, wrap, space-around, center);
+        gap: 30px;
+        margin-top: 45px;
+        margin-bottom: 150px;    
+    }
+}
+
+.promos_container{
+    @include flexible(column, nowrap, space-around, center);
+}
+
+.promos_title{
+    h1{
+        color: map.get($colores, "crema");
+        @include titulos(600, 60px, 0.07em);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    h2{
+        @include subtitulos(600, 25px);
+        color: map.get($colores, "naranja_oscuro");
+        text-align: center;
+    }
+}
+
+.promo_1{
+    width: 350px;
+    height: 450px;
+    border-radius: 15px;
+    background-image: url(../assets/img/Promo-HappyHour.jpg);
+    background-size: cover;
+    @include flexible(column, nowrap, center, center);
+    color: map.get($colores, "blanco");
+    text-align: center;
+    @include subtitulos(600, 22px);
+    transition: all 0.5s ease-in-out;
+}
+
+.promo_1:hover{
+    transform: scale(1.03, 1.03);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.promo_2{
+    @extend .promo_1;
+    background-image: url(../assets/img/Promo-Pizza.jpg);
+}
+
+.promo_3{
+    @extend .promo_1;
+    background-image: url(../assets/img/Promo-Picada.jpg);
+}
+
+.promos2{
+    @include flexible(row, nowrap, space-evenly, center);
+}
+.promo_4{
+    @extend .promo_1;
+    background-image: url(../assets/img/Burger-del-mes.jpg);
+}
+.promo_5{
+    @extend .promo_1;
+    background-image: url(../assets/img_carta/Napo-alplato.jpg);
+}
+
+@include media(){
+    .promo_1{
+        border-radius: 0px;
+    }
+    .promos_title{
+        h1{
+            @include titulos(600, 50px, 0.07em);
+        }
+    }
+}   
