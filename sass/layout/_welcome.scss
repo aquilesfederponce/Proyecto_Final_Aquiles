@@ -194,4 +194,41 @@
     }
 
 }
+@include media(768px){
+    .staff-card{
+        display: none;
+    }
+    .logo-card{
+        display: none;
+    }
+    .grid_container{
+        @include flexible(column, nowrap, center, space-around);
+        margin: 30px;
+    }
+    .carta_sucursales{
+        background-image: url(../assets/img/Fondo_sucursalescarta_tablet.webp);
+        background-size: cover;
+        min-height: 120vh;
+        .menu{
+            right: 0;
+            bottom: 50%;
+        }
+        .sucursales_boton{
+            left: 0;
+            top: 50%;
+        }
+    }
+    .menu a{
+        width: 25px;
+        height: 13px;
+        padding: 15px;
+        @include titulos(600, 30px, 0em);
+    }
+    .sucursales_boton a{
+        width: 25px;
+        height: 13px;
+        padding: 15px;
+        @include titulos(600, 30px, 0em);
+    }
+}
 

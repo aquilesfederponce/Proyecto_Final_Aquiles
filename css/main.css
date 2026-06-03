@@ -117,6 +117,36 @@ header img {
     right: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .subtitulo {
+    display: none;
+  }
+  .mostrar-menu,
+  .cerrar-menu {
+    display: block;
+  }
+  .nav-menu {
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    background: #262526;
+    right: -100%;
+    top: 0;
+    z-index: 100;
+    padding: 100px 0px;
+    transition: 0.3s;
+  }
+  .nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-around;
+  }
+  #menu-toggle:checked ~ .nav-menu {
+    right: 0;
+  }
+}
 @-webkit-keyframes fade-in-fwd {
   0% {
     -webkit-transform: translateZ(-80px);
@@ -210,6 +240,41 @@ main .hero {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 600;
     font-size: 25px;
+    letter-spacing: 0.04em;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .hero {
+    background-image: url(../assets/img/Bar-Maipu-Frente-Tablet.jpg);
+    background-size: cover;
+    width: 100%;
+  }
+  .hero__box {
+    backdrop-filter: blur(4.4px);
+    text-align: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  .hero__box img {
+    width: 200px;
+    display: block;
+  }
+  .hero__box__text1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    letter-spacing: 0.04em;
+  }
+  .hero__box__text2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 83px;
+    letter-spacing: 0.04em;
+  }
+  .hero__box__text3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 34px;
     letter-spacing: 0.04em;
   }
 }
@@ -327,6 +392,29 @@ main .hero {
     font-weight: 400;
     font-size: 15px;
     line-height: 1.7;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cartel_promos {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .cartel_promos .contenedor_promos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: space-around;
+    gap: 15px;
+    margin-top: 25px;
+  }
+  .titulo_promo {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 150px;
+    letter-spacing: 0.04em;
   }
 }
 .background {
@@ -553,6 +641,53 @@ main .hero {
     letter-spacing: 0em;
   }
 }
+@media screen and (max-width: 768px) {
+  .staff-card {
+    display: none;
+  }
+  .logo-card {
+    display: none;
+  }
+  .grid_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: space-around;
+    margin: 30px;
+  }
+  .carta_sucursales {
+    background-image: url(../assets/img/Fondo_sucursalescarta_tablet.webp);
+    background-size: cover;
+    min-height: 120vh;
+  }
+  .carta_sucursales .menu {
+    right: 0;
+    bottom: 50%;
+  }
+  .carta_sucursales .sucursales_boton {
+    left: 0;
+    top: 50%;
+  }
+  .menu a {
+    width: 25px;
+    height: 13px;
+    padding: 15px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 0em;
+  }
+  .sucursales_boton a {
+    width: 25px;
+    height: 13px;
+    padding: 15px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 0em;
+  }
+}
 footer {
   background-color: #010326;
   min-height: 60vh;
@@ -710,6 +845,20 @@ footer {
   }
   footer {
     margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .foot_container {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: space-evenly;
+    padding: 30px;
+    min-height: 75vh;
+  }
+  .foot_img {
+    display: none;
   }
 }
 .menu_carta {
@@ -1039,6 +1188,20 @@ table .titulo_table {
     padding-block: 2px;
   }
 }
+@media screen and (max-width: 768px) {
+  .hamb table .desc {
+    display: none;
+  }
+  .hamb table .description {
+    display: none;
+  }
+  .menu_title h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 55px;
+    letter-spacing: 0.07em;
+  }
+}
 /*Bootsrap*/
 .carousel-control-prev,
 .carousel-control-next {
@@ -1300,6 +1463,53 @@ table .titulo_table {
     line-height: 2;
   }
 }
+@media screen and (max-width: 768px) {
+  .sucursal_card_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: space-around;
+  }
+  .mapa {
+    width: 400px;
+    max-width: 400px;
+    height: 400px;
+    border-radius: 15px;
+  }
+  .mapa iframe {
+    width: 100%;
+    height: 400px;
+  }
+  .sucursal_card_desc {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .sucursal_card_img {
+    width: 400px;
+    height: 400px;
+  }
+  .sucursal_card h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    letter-spacing: 0.07em;
+  }
+  .sucursal_card .verso {
+    display: none;
+  }
+  .sucursales h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 55px;
+    letter-spacing: 0.07em;
+  }
+}
 .seccion_promos {
   background-color: #262526;
   min-height: 120vh;
@@ -1397,6 +1607,14 @@ table .titulo_table {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 600;
     font-size: 50px;
+    letter-spacing: 0.07em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .promos_title h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 55px;
     letter-spacing: 0.07em;
   }
 }
@@ -1542,6 +1760,19 @@ table .titulo_table {
     font-weight: 600;
     font-size: 50px;
     letter-spacing: 0.07em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contacto_title h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 600;
+    font-size: 55px;
+    letter-spacing: 0.07em;
+  }
+  .contacto_card_1, .contacto_card_2, .contacto_card_3 {
+    width: 450px;
+    max-width: 100%;
+    height: 650px;
   }
 }
 * {

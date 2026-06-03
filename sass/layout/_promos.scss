@@ -92,3 +92,19 @@
         @extend .promo_1;
     }
 }
+@include media(768px){
+    .cartel_promos{
+        width: 100%;
+        min-height: 100vh;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .contenedor_promos{
+            @include flexible(column, nowrap, center, space-around);
+            gap: 15px;
+            margin-top: 25px;    
+        }
+    }
+    .titulo_promo{
+        @include titulos(600, 150px, 0.04em);
+    }
+}

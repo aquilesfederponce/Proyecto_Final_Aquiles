@@ -131,3 +131,13 @@ footer{
         margin-bottom: 0;
     }
 }
+@include media(768px){
+    .foot_container{
+        @include flexible(column-reverse, nowrap, center, space-evenly);
+        padding: 30px;
+        min-height: 75vh;
+    }
+    .foot_img{
+        display: none;
+    }
+}

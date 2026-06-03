@@ -81,4 +81,11 @@
             @include titulos(600, 50px, 0.07em);
         }
     }
+}
+@include media(768px){
+    .promos_title{
+        h1{
+            @include titulos(600, 55px, 0.07em);
+        }
+    }
 }   

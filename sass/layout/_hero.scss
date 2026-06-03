@@ -42,13 +42,38 @@ main .hero{
         }
     }
     .hero__box__text1{
-        @include titulos(600, 25px, 0.04em)
+        @include titulos(600, 25px, 0.04em);
     }
     .hero__box__text2{
-        @include titulos(400, 74px, 0.04em)
+        @include titulos(400, 74px, 0.04em);
     }
     .hero__box__text3{
-        @include titulos(600, 25px, 0.04em)
+        @include titulos(600, 25px, 0.04em);
     }
-
+}
+@include media(768px){
+    main .hero{
+        background-image: url(../assets/img/Bar-Maipu-Frente-Tablet.jpg);
+        background-size: cover;
+        width: 100%;
+    }
+    .hero__box{
+        backdrop-filter: blur(4.4px);
+        text-align: center;
+        min-height: 100vh;
+        overflow: hidden;
+        img{
+            width: 200px;
+            display: block;
+        }
+    }
+    .hero__box__text1{
+        @include titulos(600, 34px, 0.04em);
+    }
+    .hero__box__text2{
+        @include titulos(400, 83px, 0.04em);
+    }
+    .hero__box__text3{
+        @include titulos(600, 34px, 0.04em);
+    }
 }
