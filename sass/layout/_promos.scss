@@ -92,7 +92,7 @@
         @extend .promo_1;
     }
 }
-@include media(768px){
+@include media(768px, 480px){
     .cartel_promos{
         width: 100%;
         min-height: 100vh;
@@ -105,6 +105,22 @@
         }
     }
     .titulo_promo{
-        @include titulos(600, 150px, 0.04em);
+        @include titulos(600, 250px, 0.04em);
+    }
+}
+@include media(1024px, 768px){
+    .cartel_promos{
+        width: 100%;
+        min-height: 100vh;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        .contenedor_promos{
+            @include flexible(column, nowrap, center, space-around);
+            gap: 60px;
+            margin-top: 40px;    
+        }
+    }
+    .titulo_promo{
+        @include titulos(600, 350px, 0.04em);
     }
 }

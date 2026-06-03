@@ -88,4 +88,19 @@
             @include titulos(600, 55px, 0.07em);
         }
     }
-}   
+} 
+@include media(1024px, 768px){
+    .seccion_promos{
+        .contenedor_promos{
+            @include flexible(column, nowrap, space-around, center);
+            gap: 30px;
+            margin-top: 45px;
+            margin-bottom: 150px;    
+        }
+    }
+    .promos_title{
+        h1{
+            @include titulos(600, 55px, 0.07em);
+        }
+    }
+}

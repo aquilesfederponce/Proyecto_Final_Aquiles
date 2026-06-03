@@ -147,7 +147,7 @@
         }
     }
 }
-@include media(768px){
+@include media(768px, 480px){
     .sucursal_card_container{
         @include flexible(column, nowrap, center, space-around);
     }
@@ -179,6 +179,37 @@
         }
     }
      .sucursales{
+        h1{
+            @include titulos(600, 55px, 0.07em);
+        }
+    }
+}
+@include media(1024px, 768px){
+    .sucursal_card_img{
+        width: 500px;
+        height: 450px;
+
+    }
+    .sucursal_card_desc{
+        width: 200px;
+        height: 450px;
+    }
+    .mapa{
+        width: 700px;
+        max-width: 700px;
+        height: 400px;
+        border-radius: 15px;
+    }
+    .mapa iframe{
+        width: 700%;
+        height: 400px;
+    }
+    .sucursal_card{
+        .verso{
+            @include subtitulos(600, 18px);
+        }
+    }
+    .sucursales{
         h1{
             @include titulos(600, 55px, 0.07em);
         }

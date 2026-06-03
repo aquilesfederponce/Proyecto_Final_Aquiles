@@ -263,7 +263,7 @@ table{
         }
     }
 }
-@include media(768px){
+@include media(768px, 480px){
     .hamb table{
         .desc{
             display: none;
@@ -276,6 +276,24 @@ table{
         h1{
             @include titulos(600, 55px, 0.07em);
         }
+    }
+}
+@include media(1024px, 768px){
+    .hamb table{
+        .desc{
+            display: none;
+        }
+        .description{
+            display: none;
+        }
+    }
+    .menu_title{
+        h1{
+            @include titulos(600, 55px, 0.07em);
+        }
+    }
+    .carousel{
+        display: none;
     }
 }
 

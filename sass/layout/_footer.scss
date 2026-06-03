@@ -131,7 +131,7 @@ footer{
         margin-bottom: 0;
     }
 }
-@include media(768px){
+@include media(768px, 480px){
     .foot_container{
         @include flexible(column-reverse, nowrap, center, space-evenly);
         padding: 30px;
@@ -139,5 +139,22 @@ footer{
     }
     .foot_img{
         display: none;
+    }
+}
+@include media(1024px, 768px){
+    .foot_container{
+        @include flexible(column-reverse, nowrap, center, space-evenly);
+        padding: 30px;
+        min-height: 75vh;
+    }
+    .list_container{
+        @include flexible(column, nowrap, center, flex-start);
+    }
+    .foot_list1{
+        @include flexible(column, wrap, center, space-evenly);
+        p{
+            text-align: justify;
+            margin-right: 30px;
+        }
     }
 }

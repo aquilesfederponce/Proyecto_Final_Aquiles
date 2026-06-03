@@ -32,8 +32,8 @@
 
 /*Mixin Responsive Design*/
 
-@mixin media($medida : 480px){
-    @media screen and (max-width: $medida) {
+@mixin media($medida : 480px, $minima : 0px){
+    @media screen and (max-width: $medida) and (min-width:$minima) {
         @content;
     }
 }
